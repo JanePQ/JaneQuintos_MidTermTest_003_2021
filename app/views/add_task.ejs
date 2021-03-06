@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<title><%= title %></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/add_task.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+<body>
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+  </div>
+    <div class="bg-img">
+      <div class="content">
+        <header>Enter your survey</header>	
+  <form action="/tasks" method="post">
+        
+        <label>Survey ID </label>
+        <div class="field">
+            <input class="form-control" type="text" name="taskId" />
+        </div>
+        
+        <label>Game Genre</label><br>
+        <div class="field">
+            <input class="form-control" type="text" name="gameGenre" />
+        </div>
+        
+        <label>Game Played per Year</label>
+        <div class="field">
+            <input type="text" class="form-control" name="gamePlayedPerYear" />
+        </div>
+        
+        <label>Age</label>
+        <div class="field">
+            <input type="text" class="form-control" name="age" />
+        </div><br>
+        <div class="field">
+            <input type="submit" value="Add to Survey" />
+        </div>
+    </form>
+
+<!--Javascript-->
+<script>
+      const pass_field = document.querySelector('.pass-key');
+      const showBtn = document.querySelector('.show');
+      showBtn.addEventListener('click', function(){
+       if(pass_field.type === "password"){
+         pass_field.type = "text";
+         showBtn.textContent = "HIDE";
+         showBtn.style.color = "#3498db";
+       }else{
+         pass_field.type = "password";
+         showBtn.textContent = "SHOW";
+         showBtn.style.color = "#222";
+       }
+      });
+</script>
+</body>
+</html>

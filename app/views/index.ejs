@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title><%= title %></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+<body>
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small">WEBSITE</span> GAME SURVEY</span>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><a class="w3-button w3-black" href="/list_tasks">View Survey</a></p>
+    <p><button onclick="document.getElementById('survey').style.display='block'" class="w3-button w3-black">Enter Survey</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge">Centennial College</p>
+    <p class="w3-large">Mid-Term Test</p>
+    <p>Created by: Jane Quintos</a></p>
+  </div>
+</div>
+
+<!-- Survey Add -->
+<form action="/tasks" method="post">
+<div id="survey" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('survey').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Game Survey</h1>
+    </div>
+    <div class="w3-container">
+      <p>Enter your survey</p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Survey ID" required name="taskId"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Game Genre" required name="gameGenre"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Days Played Per Year" name="gamePlayedPerYear"></p>
+        <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Age" required name="age"></p>
+        <p><button class="w3-button" type="submit">ADD TO SURVEY</button></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
